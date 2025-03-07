@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade na Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html" title="Página Inicial">Início</a></li>
+                <li><a href="sobre.html" title="Saiba mais sobre a acessibilidade">Sobre</a></li>
+                <li><a href="servicos.html" title="Nossos serviços">Serviços</a></li>
+                <li><a href="contato.html" title="Formulário de contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+    </header>
+
+    <main>
+        
+        <section aria-labelledby="intro">
+            <h1 id="intro">Bem-vindo ao nosso site sobre Acessibilidade</h1>
+            <p>Este site foi desenvolvido com o objetivo de ser o mais acessível possível para todos.</p>
+        </section>
+
+        <section aria-labelledby="descricao">
+            <h2 id="descricao">Por que a Acessibilidade é Importante?</h2>
+            <p>A acessibilidade web é essencial para garantir que todas as pessoas, independentemente de suas habilidades, possam acessar, entender e interagir com o conteúdo de forma eficaz.</p>
+        </section>
+
+        <button onclick="toggleContrast()">Alternar Contraste</button>
+
+        <script>
+            function toggleContrast() {
+                const body = document.body;
+                const currentTheme = body.getAttribute('data-theme');
+                if (currentTheme === 'high-contrast') {
+                    body.setAttribute('data-theme', 'low-contrast');
+                } else {
+                    body.setAttribute('data-theme', 'high-contrast');
+                }
+            }
+        </script>
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

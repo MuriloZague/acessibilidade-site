@@ -1,0 +1,166 @@
+/* Definindo a tipografia e as cores base */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #1a73e8;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --focus-color: #ffbf47;
+    --link-hover-color: #003366;
+}
+
+html {
+    font-size: 16px; /* 1 rem = 16px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Resetando a aparência padrão de alguns elementos */
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: var(--secondary-color);
+}
+
+/* Cabeçalho com navegação */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.1s ease;
+}
+
+nav a:focus, nav a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Conteúdo principal */
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de botões */
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, button:focus {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 2px solid var(--focus-color);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para seções de contraste */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.low-contrast {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Modo de alto contraste */
+body[data-theme='high-contrast'] {
+    background-color: black;
+    color: white;
+}
+
+body[data-theme='high-contrast'] a {
+    color: yellow;
+}
+
+/* Modo de baixo contraste */
+body[data-theme='low-contrast'] {
+    background-color: white;
+    color: black;
+}
+
+body[data-theme='low-contrast'] a {
+    color: white;
+}
+
+/* Estilo de links */
+a {
+    color: black;
+}
+
+a:focus, a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Estilos de imagens responsivas */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação suave para transições */
+* {
+    transition: all 0.2s ease;
+}
