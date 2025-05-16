@@ -2,7 +2,6 @@
 :root {
     --primary-color: #4caf50;
     --secondary-color: #1a73e8;
-    --background-color: #f4f4f9;
     --text-color: #333;
     --heading-color: #1a1a1a;
     --focus-color: #ffbf47;
@@ -16,7 +15,6 @@ html {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -30,6 +28,16 @@ ul, ol {
     list-style-type: none;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acessi {
+    color: black;
+    font-size: 2rem;
+}
+
 h1, h2, h3 {
     font-family: 'Arial', sans-serif;
     color: var(--secondary-color);
@@ -37,9 +45,10 @@ h1, h2, h3 {
 
 /* Cabeçalho com navegação */
 header {
-    background-color: var(--primary-color);
-    color: white;
+    color: black;
     padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -50,7 +59,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     transition: color 0.1s ease;
 }
@@ -140,7 +149,7 @@ body[data-theme='low-contrast'] {
 }
 
 body[data-theme='low-contrast'] a {
-    color: white;
+    color: black;
 }
 
 /* Estilo de links */
