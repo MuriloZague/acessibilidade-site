@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acessibilidade na Web</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav role="navigation" class="menu">
-            <ul>
-                <li><a class="acessi">Acessibilidade</a></li>
-            </ul>
-            <ul>
-                <li><a href="index.html" title="Página Inicial">Início</a></li>
-                <li><a href="sobre.html" title="Saiba mais sobre a acessibilidade">Sobre</a></li>
-                <li><a href="servicos.html" title="Nossos serviços">Serviços</a></li>
-                <li><a href="contato.html" title="Formulário de contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
-            </div>
-          </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
+      <nav role="navigation" class="menu">
+        <ul style="align-items: center; gap: 20px">
+          <img
+            src="./src/Logo-Site.png"
+            alt="Logo de Site Acessível"
+            style="box-shadow: none"
+            class="logo-site"
+          />
+          <li><a class="acessi" title="Acessibilidade">Acessibilidade</a></li>
+        </ul>
+        <ul style="align-items: center">
+          <li><a href="index.html" title="Página Inicial">Início</a></li>
+          <li>
+            <a href="sobre.html" title="Saiba mais sobre a acessibilidade"
+              >Sobre</a
+            >
+          </li>
+          <li><a href="servicos.html" title="Nossos serviços">Serviços</a></li>
+          <li>
+            <a href="contato.html" title="Formulário de contato">Contato</a>
+          </li>
+          <button
+            style="
+              background-color: transparent;
+              padding: 0px;
+              border-radius: 100%;
+            "
+            onclick="toggleContrast()"
+          >
+            <span
+              style="
+                color: #003366;
+                font-size: 1.5rem;
+                line-height: 1;
+                padding: 0.2rem;
+              "
+              >◐</span
+            >
+          </button>
+        </ul>
+      </nav>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
     </header>
 
     <main>
-        
-        <section aria-labelledby="intro">
-            <h1 id="intro">Bem-vindo ao nosso site sobre Acessibilidade</h1>
-            <p>Este site foi desenvolvido com o objetivo de ser o mais acessível possível para todos.</p>
-        </section>
+      <section
+        aria-labelledby="intro"
+        class="intro-section"
+        style="justify-content: space-between"
+      >
+        <div class="intro-text" style="max-width: 50%">
+          <h1 id="intro" class="title intro">
+            Bem-vindo ao site sobre Acessibilidade na Web
+          </h1>
+          <p class="sub-intro">
+            Nós promovemos a acessibilidade na web, tornando os sites mais
+            inclusivos e facilmente utilizáveis por todos.
+          </p>
+        </div>
+        <img
+          src="./src/Logo-Principal.png"
+          style="box-shadow: none; width: 38%; height: 38%"
+          alt="Logo de Site acessível que representa vários tipo de acessibilidade"
+        />
+      </section>
 
-        <section aria-labelledby="descricao">
-            <h2 id="descricao">Por que a Acessibilidade é Importante?</h2>
-            <p>A acessibilidade web é essencial para garantir que todas as pessoas, independentemente de suas habilidades, possam acessar, entender e interagir com o conteúdo de forma eficaz.</p>
-        </section>
+      <section aria-labelledby="descricao" class="desc">
+        <h2 id="descricao" class="title">
+          Por que a Acessibilidade é Importante?
+        </h2>
+        <p>
+          A acessibilidade web é essencial para garantir que todas as pessoas,
+          independentemente de suas habilidades, possam acessar, entender e
+          interagir com o conteúdo de forma eficaz.
+        </p>
+      </section>
 
-        <button onclick="toggleContrast()">Alternar Contraste</button>
-
-        <script>
-            function toggleContrast() {
-                const body = document.body;
-                const currentTheme = body.getAttribute('data-theme');
-                if (currentTheme === 'high-contrast') {
-                    body.setAttribute('data-theme', 'low-contrast');
-                } else {
-                    body.setAttribute('data-theme', 'high-contrast');
-                }
-            }
-        </script>
-        
-
+      <button onclick="toggleContrast()">Alternar Contraste</button>
     </main>
 
     <footer>
-        <p>&copy; 2025 Todos os direitos reservados.</p>
+      <p>&copy; 2025 Todos os direitos reservados.</p>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>

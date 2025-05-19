@@ -1,27 +1,31 @@
-/* Definindo a tipografia e as cores base */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 :root {
-    --primary-color: #4caf50;
-    --secondary-color: #1a73e8;
+    --primary-color: black;
+    --secondary-color: white;
     --text-color: #333;
     --heading-color: #1a1a1a;
     --focus-color: #ffbf47;
     --link-hover-color: #003366;
+    --padding-site: 0rem 10rem 0rem 10rem;
 }
 
 html {
-    font-size: 16px; /* 1 rem = 16px */
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: #f2f3f7;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    margin: 0 auto;
 }
 
-/* Resetando a aparência padrão de alguns elementos */
+main {
+    padding: var(--padding-site)
+}
+
 ul, ol {
     padding: 0;
     margin: 0;
@@ -29,31 +33,34 @@ ul, ol {
 }
 
 .menu {
+    padding: var(--padding-site);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.logo-site {
+    width: 15%;
 }
 
 .acessi {
     color: black;
     font-size: 2rem;
+    font-weight: 600;
 }
 
 h1, h2, h3 {
     font-family: 'Arial', sans-serif;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-/* Cabeçalho com navegação */
 header {
     color: black;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 1.5rem;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
     gap: 2rem;
 }
 
@@ -68,9 +75,24 @@ nav a:focus, nav a:hover {
     color: var(--link-hover-color);
 }
 
-/* Conteúdo principal */
-main {
-    padding: 2rem;
+.intro {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.sub-intro {
+    font-size: 1.4rem;
+}
+
+.intro-section {
+    display: flex;
+    margin: 3rem 0rem 5rem 0rem;
+    align-items: center;
+}
+
+.desc {
+    background-color: white;
 }
 
 h1, h2 {
@@ -78,7 +100,6 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-/* Estilo das seções */
 section {
     margin-bottom: 2rem;
 }
@@ -89,9 +110,8 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Estilos de botões */
 button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -110,7 +130,6 @@ button:focus {
     outline: 2px solid var(--focus-color);
 }
 
-/* Rodapé */
 footer {
     background-color: #333;
     color: white;
@@ -121,7 +140,6 @@ footer {
     width: 100%;
 }
 
-/* Estilos para seções de contraste */
 .high-contrast {
     background-color: #000;
     color: #fff;
@@ -132,17 +150,21 @@ footer {
     color: #333;
 }
 
-/* Modo de alto contraste */
 body[data-theme='high-contrast'] {
     background-color: black;
     color: white;
+    .title {
+        color: var(--secondary-color);
+    }
+    .acessi {
+        color: var(--secondary-color);
+    }
 }
 
 body[data-theme='high-contrast'] a {
     color: yellow;
 }
 
-/* Modo de baixo contraste */
 body[data-theme='low-contrast'] {
     background-color: white;
     color: black;
@@ -152,7 +174,6 @@ body[data-theme='low-contrast'] a {
     color: black;
 }
 
-/* Estilo de links */
 a {
     color: black;
 }
@@ -161,7 +182,6 @@ a:focus, a:hover {
     color: var(--link-hover-color);
 }
 
-/* Estilos de imagens responsivas */
 img {
     width: 100%;
     height: auto;
@@ -174,7 +194,6 @@ a:focus, button:focus {
     outline-offset: 4px;
 }
 
-/* Animação suave para transições */
 * {
     transition: all 0.2s ease;
 }
