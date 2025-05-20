@@ -45,6 +45,10 @@ ul, ol {
     width: 15%;
 }
 
+.secundary-logo-high {
+      display: none;
+}
+
 .logo-site-high {
     display: none;
 }
@@ -64,9 +68,13 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
+h4 {
+    font-size: 1.8rem;
+    color: black;
+}
+
 header {
     color: black;
-    
 }
 
 nav {
@@ -106,29 +114,41 @@ nav a:focus, nav a:hover {
 }
 
 .cards {
-    padding-top: 3rem;
+    display: flex;
+    margin-bottom: 8rem;
+    padding-top: 3.5rem;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .card {
     border-radius: 20px;
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
     padding-block: 1rem;
-    max-width: 22%;
+    max-width: 24%;
     background-color: #f6f6f8;
+}
+
+.img-final {
+    display: flex;
+    justify-content: center;
+}
+
+.final-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 48%;
+  text-align: justify;
+}
+
+.final-section {
+  margin-bottom: 12rem;
 }
 
 h1, h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-.cards {
-    display: flex;
 }
 
 p {
@@ -160,9 +180,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     bottom: 0;
-    width: 100%;
 }
 
 .high-contrast {
@@ -190,18 +209,32 @@ body[data-theme='high-contrast'] {
     .main-logo {
         display: none
     };
+    .secundary-logo {
+      display: none;
+    } 
     .logo-site-high {
         display: block;
     };
     .main-logo-high {
         display: block;
     };
+    .secundary-logo-high {
+      display: block;
+    }
     nav {
         background-color: black;
+    }
+    .card {
+        background-color: black;
+        border: solid 0.15rem white;
     }
 }
 
 body[data-theme='high-contrast'] a {
+    color: yellow;
+}
+
+body[data-theme='high-contrast'] h4 {
     color: yellow;
 }
 
