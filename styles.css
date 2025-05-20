@@ -7,7 +7,7 @@
     --heading-color: #1a1a1a;
     --focus-color: #ffbf47;
     --link-hover-color: #003366;
-    --padding-site: 0rem 10rem 0rem 10rem;
+    --padding-site: 0rem 15rem 0rem 15rem;
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: #f2f3f7;
+    background-color: white;
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--text-color);
     margin: 0 auto;
@@ -34,6 +34,8 @@ ul, ol {
 
 .menu {
     padding: var(--padding-site);
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +66,11 @@ h1, h2, h3 {
 
 header {
     color: black;
-    margin-top: 1.5rem;
+    
+}
+
+nav {
+    background-color: #f6f6f8;
 }
 
 nav ul {
@@ -99,8 +105,17 @@ nav a:focus, nav a:hover {
     align-items: center;
 }
 
-.desc {
-    background-color: white;
+.cards {
+    padding-top: 3rem;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 20px;
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    max-width: 22%;
+    background-color: #f6f6f8;
 }
 
 h1, h2 {
@@ -112,6 +127,10 @@ section {
     margin-bottom: 2rem;
 }
 
+.cards {
+    display: flex;
+}
+
 p {
     font-size: 1.125rem;
     line-height: 1.8;
@@ -120,7 +139,6 @@ p {
 
 button {
     background-color: var(--primary-color);
-    color: white;
     border: none;
     padding: 0.8rem 1.5rem;
     font-size: 1.125rem;
@@ -143,7 +161,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -179,6 +196,9 @@ body[data-theme='high-contrast'] {
     .main-logo-high {
         display: block;
     };
+    nav {
+        background-color: black;
+    }
 }
 
 body[data-theme='high-contrast'] a {
