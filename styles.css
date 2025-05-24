@@ -129,6 +129,10 @@ nav a:focus, nav a:hover {
     background-color: #f6f6f8;
 }
 
+.card:hover {
+    transform: scale(1.08);
+}
+
 .img-final {
     display: flex;
     justify-content: center;
