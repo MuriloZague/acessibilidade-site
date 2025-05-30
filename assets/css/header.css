@@ -1,0 +1,60 @@
+.menu {
+    padding: var(--padding-site);
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    align-items: center
+}
+
+.menu ul.logo {
+    gap: 20px;
+}
+
+.logo-site,
+.logo-site-high {
+    width: 15%;
+    box-shadow: none;
+}
+
+.secundary-logo-high {
+    display: none;
+}
+
+.logo-site-high {
+    display: none;
+}
+
+.main-logo-high {
+    display: none;
+}
+
+.main-logo,
+.main-logo-high {
+    box-shadow: none;
+    width: 35%;
+    height: 35%
+}
+
+.acessi {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.botao-contraste {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 100%;
+}
+
+.botao-contraste span {
+    color: #003366;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.2rem;
+}
