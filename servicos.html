@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Acessibilidade na Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
 </head>
+
 <body>
     <header>
-        <nav role="navigation">
+        <nav role="navigation" class="menu">
+            <ul class="logo">
+                <img src="./src/Logo-Site.png" alt="Logo de Site Acessível" class="logo-site" />
+                <img src="./src/Logo-Site-High.png" alt="Logo de Site Acessível" class="logo-site-high" />
+                <li><a class="acessi" title="Acessibilidade">Acessibilidade</a></li>
+            </ul>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html" title="Página Inicial">Início</a></li>
+                <li>
+                    <a href="sobre.html" title="Saiba mais sobre a acessibilidade">Sobre</a>
+                </li>
+                <li><a href="servicos.html" title="Nossos serviços">Serviços</a></li>
+                <li>
+                    <a href="contato.html" title="Formulário de contato">Contato</a>
+                </li>
+                <button type="button" class="botao-contraste" onclick="toggleContrast()">
+                    <span>◐</span>
+                </button>
             </ul>
         </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget("https://vlibras.gov.br/app");
+        </script>
     </header>
 
     <main>
         <section aria-labelledby="sobre">
-            <h1 id="sobre">Serviços</h1>
-            <p>Este site foi projetado para ser o mais acessível possível, utilizando recursos como navegação por teclado, leitura de tela, e contrastes ajustáveis.</p>
+            <h1 id="sobre" class="title">Serviços</h1>
+            <p>Este site foi projetado para ser o mais acessível possível, utilizando recursos como navegação por
+                teclado, leitura de tela, e contrastes ajustáveis.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
