@@ -11,13 +11,13 @@
 
 <body>
     <header>
-        <nav role="navigation" class="menu">
+        <nav role="navigation" class="menu" style="position: fixed; top: 0; width: 80%; z-index: 1000;">
             <ul class="logo">
                 <img src="./src/Logo-Site.png" alt="Logo de Site Acessível" class="logo-site" />
                 <img src="./src/Logo-Site-High.png" alt="Logo de Site Acessível" class="logo-site-high" />
                 <li><a class="acessi" title="Acessibilidade">Acessibilidade</a></li>
             </ul>
-            <ul>
+            <ul style="font-size: 1.2rem;">
                 <li><a href="index.html" title="Página Inicial">Início</a></li>
                 <li>
                     <a href="sobre.html" title="Saiba mais sobre a acessibilidade">Sobre</a>
@@ -25,6 +25,10 @@
                 <li><a href="servicos.html" title="Nossos serviços">Serviços</a></li>
                 <li>
                     <a href="contato.html" title="Formulário de contato">Contato</a>
+                </li>
+                <li>
+                    <a onclick="aumentarFonte()" style="user-select: none;">A+</a>
+                    <a onclick="diminuirFonte()" style="user-select: none;">A-</a>
                 </li>
                 <button type="button" class="botao-contraste" onclick="toggleContrast()">
                     <span>◐</span>
@@ -43,7 +47,7 @@
         </script>
     </header>
 
-    <main>
+    <main style="margin-top: 10rem;">
         <section aria-labelledby="sobre">
             <h1 id="sobre" class="title">Contato</h1>
             <p>Este site foi projetado para ser o mais acessível possível, utilizando recursos como navegação por

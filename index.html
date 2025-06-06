@@ -11,13 +11,13 @@
 
 <body>
   <header>
-    <nav role="navigation" class="menu">
+    <nav role="navigation" class="menu" style="position: fixed; top: 0; width: 80%; z-index: 1000;">
       <ul class="logo">
         <img src="./src/Logo-Site.png" alt="Logo de Site Acessível" class="logo-site" />
-        <img src="./src/Logo-Site-High.png" alt="Logo de Site Acessível"  class="logo-site-high" />
+        <img src="./src/Logo-Site-High.png" alt="Logo de Site Acessível" class="logo-site-high" />
         <li><a class="acessi" title="Acessibilidade">Acessibilidade</a></li>
       </ul>
-      <ul>
+      <ul style="font-size: 1.2rem;">
         <li><a href="index.html" title="Página Inicial">Início</a></li>
         <li>
           <a href="sobre.html" title="Saiba mais sobre a acessibilidade">Sobre</a>
@@ -26,8 +26,12 @@
         <li>
           <a href="contato.html" title="Formulário de contato">Contato</a>
         </li>
+        <li>
+          <a onclick="aumentarFonte()" style="user-select: none;">A+</a>
+          <a onclick="diminuirFonte()" style="user-select: none;">A-</a>
+        </li>
         <button type="button" class="botao-contraste" onclick="toggleContrast()">
-          <span >◐</span>
+          <span>◐</span>
         </button>
       </ul>
     </nav>
@@ -43,7 +47,7 @@
     </script>
   </header>
 
-  <main>
+  <main style="margin-top: 10rem;">
     <section aria-labelledby="introdução" class="intro-section" style="justify-content: space-between">
       <div class="intro-text" style="max-width: 50%">
         <h1 id="intro" class="title intro">
@@ -54,8 +58,10 @@
           inclusivos e facilmente utilizáveis por todos.
         </p>
       </div>
-      <img class="main-logo" src="./src/Logo-Principal.png" alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
-      <img class="main-logo-high" src="./src/Logo-Principal-High.png" alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
+      <img class="main-logo" src="./src/Logo-Principal.png"
+        alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
+      <img class="main-logo-high" src="./src/Logo-Principal-High.png"
+        alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
     </section>
 
     <section aria-labelledby="descricao" class="cards">
@@ -83,10 +89,10 @@
 
     <section aria-labelledby="final" class="final-section">
       <div class="img-final">
-        <img class="secundary-logo" src="./src/Logo-Segundaria.png" style="box-shadow: none; width: 30%; height: 30%"
+        <img class="secundary-logo" src="./src/Logo-Segundaria.png" style="box-shadow: none; width: 30rem;"
           alt="Imagem representativa sobre acessibilidade" />
         <img class="secundary-logo-high" src="./src/Logo-Segundaria-High.png"
-          style="box-shadow: none; width: 30%; height: 30%" alt="Imagem representativa sobre acessibilidade" />
+          style="box-shadow: none; width: 30rem;" alt="Imagem representativa sobre acessibilidade" />
       </div>
       <div class="final-text">
         <h4 style="text-align: left;">Entenda a importância da acessibilidade web</h4>
