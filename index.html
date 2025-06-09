@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,14 +7,13 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/header.css" />
 </head>
-
 <body>
   <header>
     <nav role="navigation" class="menu" style="position: fixed; top: 0; width: 80%; z-index: 1000;">
       <ul class="logo">
         <img src="./src/Logo-Site.png" alt="Logo de Site Acessível" class="logo-site" />
         <img src="./src/Logo-Site-High.png" alt="Logo de Site Acessível" class="logo-site-high" />
-        <li><a class="acessi" title="Acessibilidade">Acessibilidade</a></li>
+        <li><span class="acessi" title="Acessibilidade">Acessibilidade</span></li>
       </ul>
       <ul style="font-size: 1.2rem;">
         <li><a href="index.html" title="Página Inicial">Início</a></li>
@@ -27,12 +25,14 @@
           <a href="contato.html" title="Formulário de contato">Contato</a>
         </li>
         <li>
-          <a onclick="aumentarFonte()" style="user-select: none;">A+</a>
-          <a onclick="diminuirFonte()" style="user-select: none;">A-</a>
+          <span onclick="aumentarFonte()" style="user-select: none;" tabindex="0">A+</span>
+          <span onclick="diminuirFonte()" style="user-select: none;" tabindex="0">A-</span>
         </li>
+        <li>
         <button type="button" class="botao-contraste" onclick="toggleContrast()">
           <span>◐</span>
         </button>
+        </li>
       </ul>
     </nav>
     <div vw class="enabled">
@@ -48,7 +48,7 @@
   </header>
 
   <main style="margin-top: 10rem;">
-    <section aria-labelledby="introdução" class="intro-section" style="justify-content: space-between">
+    <section aria-labelledby="intro" class="intro-section" style="justify-content: space-between">
       <div class="intro-text" style="max-width: 50%">
         <h1 id="intro" class="title intro">
           Bem-vindo ao site sobre Acessibilidade na Web
@@ -64,37 +64,40 @@
         alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
     </section>
 
-    <section aria-labelledby="descricao" class="cards">
-      <div class="card">
+    <section aria-labelledby="descricao">
+      <div class="cards" id="descricao">
+      <div class="card" tabindex="0">
         <h4>Sobre a Acessibilidade</h4>
         <p>
           Aprenda mais sobre a importância da acessibilidade na web e nossas
           iniciativas.
         </p>
       </div>
-      <div class="card">
+      <div class="card" tabindex="0">
         <h4>Nossos Serviços</h4>
         <p>
           Oferecemos consultoria e ferramentas para melhorar a acessibilidade
           do seu site.
         </p>
       </div>
-      <div class="card">
+      <div class="card" tabindex="0">
         <h4>Entre em Contato</h4>
         <p>
           Entre em contato conosco para saber mais sobre como podemos ajudar
         </p>
       </div>
+      </div>
     </section>
 
-    <section aria-labelledby="final" class="final-section">
+    <section aria-labelledby="final">
+      <div class="final-section" id="final">
       <div class="img-final">
         <img class="secundary-logo" src="./src/Logo-Segundaria.png" style="box-shadow: none; width: 30rem;"
           alt="Imagem representativa sobre acessibilidade" />
         <img class="secundary-logo-high" src="./src/Logo-Segundaria-High.png"
           style="box-shadow: none; width: 30rem;" alt="Imagem representativa sobre acessibilidade" />
       </div>
-      <div class="final-text">
+      <div class="final-text" tabindex="0">
         <h4 style="text-align: left;">Entenda a importância da acessibilidade web</h4>
         <p>
           A acessibilidade na web garante que os sites sejam utilizáveis por
@@ -108,11 +111,12 @@
           inclusiva para todos.
         </p>
       </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Todos os direitos reservados.</p>
+  <footer aria-labelledby="direitos-site">
+    <p id="direitos-site">&copy; 2025 Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>

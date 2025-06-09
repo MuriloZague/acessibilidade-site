@@ -13,7 +13,6 @@ const passo = 10; // incremento em %
 
 function ajustarFonte() {
   document.querySelector('main').style.fontSize = `${tamanhoFonteAtual}%`;
-
 }
 
 function aumentarFonte() {
@@ -32,3 +31,10 @@ function diminuirFonte() {
 
 // Ajusta ao carregar a página
 window.onload = ajustarFonte;
+
+//forms contato
+document.getElementById('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Formulário enviado com sucesso!');
+  document.getElementById('form').reset();
+});
