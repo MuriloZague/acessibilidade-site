@@ -187,6 +187,9 @@ footer {
 body[data-theme='high-contrast'] {
   background-color: black;
   color: white;
+  .btn-text {
+    color: yellow;
+  }
 }
 
 body[data-theme='high-contrast'] .title,
