@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.card:focus,
+.card:focus, .final-text
 .final-text:focus {
   outline: 3px solid #005fcc;
   background-color: #eef; /* ou outro destaque */
