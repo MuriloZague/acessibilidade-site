@@ -25,26 +25,16 @@
           <a href="contato.html" title="Formulário de contato">Contato</a>
         </li>
         <li>
-          <button onclick="aumentarFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A+</span></button>
-          <button onclick="diminuirFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A-</span></button>
+          <button aria-describedby="aumentarFonte" onclick="aumentarFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A+</span></button>
+          <button aria-describedby="diminuirFonte" onclick="diminuirFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A-</span></button>
         </li>
         <li>
-        <button type="button" class="botao-contraste" onclick="toggleContrast()">
+        <button aria-describedby="mudarContrastePagina" type="button" class="botao-contraste" onclick="toggleContrast()">
           <span>◐</span>
         </button>
         </li>
       </ul>
     </nav>
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
   </header>
 
   <main style="margin-top: 10rem;">
@@ -120,6 +110,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
 </body>
 
 </html>
