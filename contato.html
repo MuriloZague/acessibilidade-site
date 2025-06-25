@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato - Acessibilidade na Web</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Acessibilidade na Web</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
   <header>
     <nav role="navigation" class="menu" style="position: fixed; top: 0; width: 80%; z-index: 1000; font-weight: bold;">
       <ul class="logo">
@@ -25,53 +28,59 @@
           <a href="contato.html" title="Formulário de contato">Contato</a>
         </li>
         <li>
-          <button aria-label="aumentarFonte" onclick="aumentarFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A+</span></button>
-          <button aria-label="diminuirFonte" onclick="diminuirFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A-</span></button>
+          <button aria-label="aumentarFonte" onclick="aumentarFonte()"
+            style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;"
+            tabindex="0"><span class="btn-text">A+</span></button>
+          <button aria-label="diminuirFonte" onclick="diminuirFonte()"
+            style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;"
+            tabindex="0"><span class="btn-text">A-</span></button>
         </li>
         <li>
-        <button aria-label="mudarContrastePagina" type="button" class="botao-contraste" onclick="toggleContrast()">
-          <span>◐</span>
-        </button>
+          <button aria-label="mudarContrastePagina" type="button" class="botao-contraste" onclick="toggleContrast()">
+            <span>◐</span>
+          </button>
         </li>
       </ul>
     </nav>
   </header>
-    <main style="margin-top: 10rem">
-      <section aria-label="titulo-contato" id="formulario">
-        <h4 id="titulo-contato">Entre em Contato Conosco!</h4>
-        <form class="form-contato" id="form">
-            <div class="primeiros-forms">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required />
-                </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-            </div>
-            <div>
-                <label for="mensagem" class="mensagem-texto">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
-    <script src="script.js"></script>
+  <main style="margin-top: 10rem">
+    <section aria-label="titulo-contato" id="formulario">
+      <h4 id="titulo-contato">Entre em Contato Conosco!</h4>
+      <form action="https://formspree.io/f/manjldaj" method="POST" class="form-contato" id="form">
+        <div class="primeiros-forms">
+          <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+
+        <div>
+          <label for="mensagem" class="mensagem-texto">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
   <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
-  </body>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+</body>
+
 </html>

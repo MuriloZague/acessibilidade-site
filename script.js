@@ -33,8 +33,8 @@ function diminuirFonte() {
 window.onload = ajustarFonte;
 
 //forms contato
-document.getElementById('form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Formulário enviado com sucesso!');
-  document.getElementById('form').reset();
-});
+// document.getElementById('form').addEventListener('submit', function(e) {
+//   e.preventDefault();
+//   alert('Formulário enviado com sucesso!');
+//   document.getElementById('form').reset();
+// });
