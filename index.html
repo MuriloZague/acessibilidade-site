@@ -25,11 +25,11 @@
           <a href="contato.html" title="Formulário de contato">Contato</a>
         </li>
         <li>
-          <button aria-describedby="aumentarFonte" onclick="aumentarFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A+</span></button>
-          <button aria-describedby="diminuirFonte" onclick="diminuirFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A-</span></button>
+          <button aria-label="aumentar fonte" onclick="aumentarFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A+</span></button>
+          <button aria-label="diminuir fonte" onclick="diminuirFonte()" style="user-select: none; background-color: transparent; padding: 0.5rem; font-weight: bold;" tabindex="0"><span class="btn-text">A-</span></button>
         </li>
         <li>
-        <button aria-describedby="mudarContrastePagina" type="button" class="botao-contraste" onclick="toggleContrast()">
+        <button aria-label="mudar contraste da pagina" type="button" class="botao-contraste" onclick="toggleContrast()">
           <span>◐</span>
         </button>
         </li>
@@ -38,7 +38,7 @@
   </header>
 
   <main style="margin-top: 10rem;">
-    <section aria-labelledby="intro" class="intro-section" style="justify-content: space-between">
+    <section aria-label="intro" class="intro-section" style="justify-content: space-between">
       <div class="intro-text" style="max-width: 50%">
         <h1 id="intro" class="title intro">
           Bem-vindo ao site sobre Acessibilidade na Web
@@ -54,7 +54,7 @@
         alt="Logo de Site acessível que representa vários tipo de acessibilidade" />
     </section>
 
-    <section aria-labelledby="descricao">
+    <section aria-label="descricao">
       <div class="cards" id="descricao">
       <div class="card" tabindex="0">
         <h4>Sobre a Acessibilidade</h4>
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="final">
+    <section aria-label="final">
       <div class="final-section" id="final">
       <div class="img-final">
         <img class="secundary-logo" src="./src/Logo-Segundaria.png" style="box-shadow: none; width: 30rem;"
@@ -94,8 +94,7 @@
           todos, incluindo pessoas com deficiências. Isso inclui oferecer
           suporte a leitores de tela, navegação por teclado, e outros recursos
           assistivos.
-        </p>
-        <p>
+
           Neste site, discutimos princípios, diretrizes e formas
           de implementar a acessibilidade, ajudando a construir uma web mais
           inclusiva para todos.
@@ -105,7 +104,7 @@
     </section>
   </main>
 
-  <footer aria-labelledby="direitos-site">
+  <footer aria-label="direitos-site">
     <p id="direitos-site">&copy; 2025 Todos os direitos reservados.</p>
   </footer>
 
