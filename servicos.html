@@ -79,6 +79,29 @@
         width: 100%;
       }
     }
+
+    .img-2 {
+      width: 45%;
+    }
+
+    .img-3 {
+      width: 25%;
+    }
+
+    .img-4 {
+      width: 5%;
+      height: 4rem;
+    }
+
+    .img-5 {
+      width: 10%;
+    }
+
+    .contraste {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -152,7 +175,7 @@
         <p>Este é um exemplo de texto e imagem que será afetado pelos filtros acima.</p>
         <img
           src="./assets/paisagem-de-nevoeiro-matinal-e-montanhas-com-baloes-de-ar-quente-ao-nascer-do-sol_335224-794.avif"
-          alt="Exemplo de imagem" width="250" height="120" />
+          alt="Imagem de um balão de ar quente" width="250" height="120" />
       </div>
 
       <script>
@@ -185,7 +208,29 @@
     <hr>
     <section>
       <h4 style="font-size: 2.4rem;">Navegação por teclado</h4>
-      <p>Você consegue navegar por todo o site apenas usando o teclado</p>
+      <p>Você consegue navegar por todo o site apenas usando o teclado.</p>
+      <img class="img-2" src="./assets/keyboard-nav.jpg" alt="Imagem demonstrando navegação por teclado">
+    </section>
+    <hr>
+    <section>
+      <h4>Integração com o VLIBRAS</h4>
+      <p>Nosso site possui integração com o VLIBRAS, API de libras grátis do Governo Digital Brasileiro, você pode encontrar o ícone na direita do site.</p>
+      <img class="img-3" src="./assets/vlibras.jpg" alt="Imagem demonstrando a integração do VLIBRAS">
+    </section>
+    <hr>
+    <section>
+      <h4>Controles de Contraste</h4>
+      <p>Você pode controlar o contraste do site pelo botão no canto direito da navegação, ou clicando no botão abaixo.</p>
+      <div class="contraste">
+        <img class="img-4" src="./assets/contraste.jpg" alt="Imagem mostrando o botão para mudnaça de contraste">
+        <button style="padding: 1rem;" onclick="toggleContrast()">Mudar Contraste</button>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <h4>Controles de Tamanho da Fonte</h4>
+      <p>Você pode controlar o tamanho da fonte do site clicando nos botões:</p>
+      <img class="img-5" src="./assets/fontes.jpg" alt="Imagem demonstrando os botões de aumentar e diminuir a fonte">
     </section>
   </main>
   <footer>
